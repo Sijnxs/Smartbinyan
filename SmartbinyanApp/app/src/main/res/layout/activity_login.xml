@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Eco Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/eco" />
+
+    <!-- Light overlay to enhance readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66FFFFFF" /> <!-- light white overlay, 40% opacity -->
+
+    <!-- Content ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="24dp">
+
+            <!-- App Logo / Name -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SmartBinYan"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#1A5E34"
+                android:fontFamily="@font/noto_serif"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Username Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textSize="16sp"
+                android:textColor="#4CAF50"
+                android:fontFamily="@font/noto_serif"
+                android:layout_marginBottom="4dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:boxStrokeColor="#4CAF50"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="1dp"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    android:hint="Enter username"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/noto_serif"
+                    android:textColor="#1A5E34"
+                    android:textColorHint="#2E7D32" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Password Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textSize="16sp"
+                android:textColor="#4CAF50"
+                android:fontFamily="@font/noto_serif"
+                android:layout_marginBottom="4dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                app:endIconMode="password_toggle"
+                app:boxStrokeColor="#4CAF50"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeWidth="1dp"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="14dp"
+                    android:hint="Enter password"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/noto_serif"
+                    android:inputType="textPassword"
+                    android:textColor="#1A5E34"
+                    android:textColorHint="#2E7D32" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Login Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Login"
+                android:textSize="16sp"
+                android:fontFamily="@font/noto_serif"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#1A5E34"
+                android:paddingVertical="14dp"
+                app:cornerRadius="12dp"
+                android:elevation="2dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Google Login Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGoogle"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Sign in with Google"
+                android:textSize="16sp"
+                android:fontFamily="@font/noto_serif"
+                android:textColor="#000000"
+                android:backgroundTint="@android:color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0"
+                app:icon="@drawable/ic_google"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                app:iconTint="@null"
+                app:cornerRadius="12dp"
+                android:elevation="1dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Go to Register Text -->
+            <TextView
+                android:id="@+id/btnGoRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? Register here"
+                android:textColor="#4CAF50"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:fontFamily="@font/noto_serif"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

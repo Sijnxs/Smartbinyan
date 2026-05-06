@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_gas_alert" />
+    <drawable name="ic_image_placeholder" />
+    <drawable name="ic_placeholder" />
+    <drawable name="ic_error" />
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">SmartBinYan</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="bin_status">Bin Status</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="details">Details</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="default_web_client_id">AIzaSyByom5TTI59DF-HK0EMkX3qeqtMUUh0h38</string>
+    <string name="facebook_app_id">1838485883545848</string>
+    <string name="fb_login_protocol_scheme">27fbe87c7ba6a8ed760e22a55f2b3a5a</string>
+
+</resources>

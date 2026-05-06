@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Eco Background (brighter) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/eco"
+        android:alpha="0.8" /> <!-- brighter background -->
+
+    <!-- Light overlay for readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCFFFFFF" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="24dp"
+        android:layout_gravity="center">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verify Your Account"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1A5E34"
+            android:fontFamily="@font/noto_serif"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Single long input for verification code -->
+        <EditText
+            android:id="@+id/etVerificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter verification code"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textSize="20sp"
+            android:textColor="#1A5E34"
+            android:textColorHint="#1A5E34"
+            android:background="#E6FFFFFF"
+            android:fontFamily="@font/noto_serif"
+            android:padding="12dp"
+            android:layout_marginBottom="32dp"
+            android:elevation="2dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Verify Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify Code"
+            android:textSize="18sp"
+            android:fontFamily="@font/noto_serif"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1A5E34"
+            app:cornerRadius="12dp"
+            android:elevation="4dp"
+            android:paddingVertical="14dp"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+</FrameLayout>

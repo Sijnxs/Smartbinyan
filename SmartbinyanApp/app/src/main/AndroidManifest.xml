@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.smartbinyan">
+
+    <!-- ✅ Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- ✅ Optional Sensors -->
+    <uses-feature
+        android:name="android.hardware.sensor.proximity"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/smartbinyan"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/smartbinyan_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Smartbinyan">
+
+        <!-- ✅ Google Play Services Metadata -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- ✅ MQTT Background Service -->
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
+            android:exported="false" />
+
+        <!-- ✅ Firebase Messaging Service -->
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- ✅ Launch Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ✅ Other Activities -->
+        <activity android:name=".SplashActivity" android:exported="true" />
+        <activity android:name=".RegisterActivity" android:exported="true" />
+        <activity android:name=".DashboardActivity" android:exported="true" />
+        <activity android:name=".ProfileActivity" android:exported="true" />
+        <activity android:name=".AboutUsActivity" android:exported="true" />
+        <activity android:name=".HomePageActivity" android:exported="true" />
+
+        <!-- ✅ Notification Activity -->
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true"
+            android:label="SmartBinyan Notifications"
+            android:theme="@style/Theme.Smartbinyan" />
+
+        <!-- ✅ BinStatusActivity (two versions included for compatibility) -->
+        <activity
+            android:name=".ui.BinStatusActivity"
+            android:exported="true"
+            android:label="Trash History / Bin Status"
+            android:theme="@style/Theme.Smartbinyan"
+            tools:ignore="MissingClass" />
+
+        <activity
+            android:name=".adapters.BinStatusActivity"
+            android:exported="true"
+            android:label="Trash History / Bin Status"
+            android:theme="@style/Theme.Smartbinyan"
+            tools:ignore="MissingClass" />
+
+        <!-- ✅ Verify Code -->
+        <activity
+            android:name=".VerifyCodeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Smartbinyan" />
+
+    </application>
+
+</manifest>

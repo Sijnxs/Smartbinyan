@@ -1,0 +1,27 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!-- Gradient teal tones -->
+    <gradient
+        android:startColor="#00BFA5"
+        android:centerColor="#009688"
+        android:endColor="#00796B"
+        android:angle="270"
+        android:type="linear" />
+
+    <!-- Softer rounded corners -->
+    <corners android:radius="24dp" />
+
+    <!-- Add a light subtle border for contrast -->
+    <stroke
+        android:width="1.5dp"
+        android:color="#B2DFDB" />
+
+    <!-- Inner spacing -->
+    <padding
+        android:left="14dp"
+        android:top="12dp"
+        android:right="14dp"
+        android:bottom="12dp" />
+
+    <!-- Add a gentle shadow-like overlay (for 3D feel on white background) -->
+    <solid android:color="@android:color/transparent" />
+</shape>

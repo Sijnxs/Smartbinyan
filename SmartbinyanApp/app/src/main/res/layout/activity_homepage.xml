@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/bottomNavContainer">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/eco"
+            android:contentDescription="Eco Background"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66FFFFFF" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="40dp"
+                    android:paddingBottom="40dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome to SmartBinyan"
+                        android:textSize="38sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A5E34"
+                        android:fontFamily="@font/noto_serif"
+                        android:textAlignment="viewStart"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="40dp"
+                        android:fontFamily="@font/noto_serif"
+                        android:lineSpacingExtra="6dp"
+                        android:text="The smart bin that features automatic segregation with real-time status and maintenance notifications."
+                        android:textAlignment="viewStart"
+                        android:textColor="#2E7D32"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:background="#E0F7EA"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:elevation="12dp"
+            android:clipToOutline="true">
+
+            <LinearLayout
+                android:id="@+id/bottomProfile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_profile"
+                    app:tint="#1A5E34"
+                    android:contentDescription="Profile Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="#1A5E34"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/noto_serif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomStatus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_status"
+                    app:tint="#1A5E34"
+                    android:contentDescription="Status Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Statuus"
+                    android:textColor="#1A5E34"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/noto_serif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomAbout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_info"
+                    app:tint="#1A5E34"
+                    android:contentDescription="About Us Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About Us"
+                    android:textColor="#1A5E34"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/noto_serif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomNotification"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/ic_notification"
+                    app:tint="#1A5E34"
+                    android:contentDescription="Notification Icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification"
+                    android:textColor="#1A5E34"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/noto_serif" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,3 @@
+food_waste
+non-toxic_waste
+toxic_waste

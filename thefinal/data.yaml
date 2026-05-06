@@ -1,0 +1,5 @@
+train: ./images/train
+val: ./images/val
+
+nc: 3
+names: ['food_waste', 'non-toxic_waste', 'toxic_waste']

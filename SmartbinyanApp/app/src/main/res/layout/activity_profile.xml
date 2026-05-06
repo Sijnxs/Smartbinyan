@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/eco"
+        android:alpha="0.85" />
+
+    <!-- Soft white overlay for better readability -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B3FFFFFF" /> <!-- more solid overlay for visibility -->
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Settings"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="#1A5E34"
+                android:fontFamily="@font/noto_serif"
+                android:layout_marginBottom="24dp"
+                android:shadowColor="#33000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2" />
+
+            <!-- Profile Image -->
+            <FrameLayout
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginBottom="28dp"
+                android:background="@drawable/profile_circle_bg"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Profile Image"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/profile_edit_bg"
+                    android:elevation="6dp"
+                    android:padding="2dp"
+                    android:clipToOutline="true" />
+            </FrameLayout>
+
+            <!-- Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                app:boxStrokeColor="#1A5E34"
+                app:hintTextColor="#1A5E34"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="#FFFFFFFF"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:padding="14dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/noto_serif"
+                    android:textColor="#1A5E34"
+                    android:textColorHint="#1A5E34" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:boxStrokeColor="#1A5E34"
+                app:hintTextColor="#1A5E34"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="#FFFFFFFF"
+                android:elevation="4dp"
+                android:layout_marginBottom="16dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:padding="14dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/noto_serif"
+                    android:textColor="#1A5E34"
+                    android:textColorHint="#1A5E34" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Phone -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                app:boxStrokeColor="#1A5E34"
+                app:hintTextColor="#1A5E34"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxBackgroundColor="#FFFFFFFF"
+                android:elevation="4dp"
+                android:layout_marginBottom="28dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:padding="14dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/noto_serif"
+                    android:textColor="#1A5E34"
+                    android:textColorHint="#1A5E34" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Save Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Changes"
+                android:textSize="18sp"
+                android:fontFamily="@font/noto_serif"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1A5E34"
+                app:cornerRadius="50dp"
+                android:elevation="6dp"
+                android:layout_marginBottom="12dp"
+                android:paddingVertical="14dp" />
+
+            <!-- Back Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textSize="18sp"
+                android:fontFamily="@font/noto_serif"
+                android:textColor="#1A5E34"
+                android:backgroundTint="#DFF6E2"
+                app:cornerRadius="50dp"
+                android:elevation="5dp"
+                android:layout_marginBottom="12dp"
+                android:paddingVertical="14dp" />
+
+            <!-- Logout Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:fontFamily="@font/noto_serif"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#C84A37"
+                app:cornerRadius="50dp"
+                android:elevation="6dp"
+                android:paddingVertical="14dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

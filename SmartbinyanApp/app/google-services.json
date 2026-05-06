@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "391088279714",
+    "firebase_url": "https://smartbinyan-default-rtdb.firebaseio.com",
+    "project_id": "smartbinyan",
+    "storage_bucket": "smartbinyan.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391088279714:android:203c7674d0ecab290347fb",
+        "android_client_info": {
+          "package_name": "com.example.smartbinyan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391088279714-308c61dt66j96pv6a37ebcehgh3v1kvj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartbinyan",
+            "certificate_hash": "55e425fd8e13c939a7dcd6b682f326c57df2e53d"
+          }
+        },
+        {
+          "client_id": "391088279714-s0ndovvl3tr2e1n87puiat6feoc5h772.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMeRVE7uUb8UFJmHELXxqDJqJv7n994WU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391088279714-s0ndovvl3tr2e1n87puiat6feoc5h772.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

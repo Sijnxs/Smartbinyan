@@ -1,0 +1,21 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "food_waste"
+    },
+    {
+      "id": 1,
+      "name": "non-toxic_waste"
+    },
+    {
+      "id": 2,
+      "name": "toxic_waste"
+    }
+  ],
+  "info": {
+    "year": 2025,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}
